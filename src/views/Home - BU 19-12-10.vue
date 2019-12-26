@@ -14,11 +14,7 @@
         </routerLink>
       </div>
       <div class="Quote">
-        <div style="height:30px; display:flex; flex-direction:column; justify-content:center;">
-          <div style="font-size:24px; margin:0px; padding:0px; height:40px;">
-            "Tout comprendre, c'est tout pardonner."
-          </div>
-          <div style="font-size:24px; margin:0px; padding:0px">----Tolstoy, War and Peace</div>        </div>
+          <p style="font-size:24px;">"Tout comprendre, c'est tout pardonner."</p>
       </div>
       <div class="TopMen">
         <div style="font-size:18px; padding:10px 30px;"><routerLink :to="{name: 'Explore'}">What Is Afreeism?</routerLink></div>
@@ -91,5 +87,67 @@ export default {
 };
 </script>
 <style scoped>
-
+.HomePage {
+  display:grid;
+  grid-template-columns: 200px auto 200px;
+  grid-template-rows: 30px auto auto auto 30px;
+  grid-template-areas:
+    'Top Top Top'
+    'Logo Quote RSidebar'
+    'TopMen TopMen RSidebar'
+    'Main Main RSidebar'
+    'Bottom Bottom Bottom'
+}
+.Top {
+  grid-area: Top;
+  background-color:#074477;
+  display:flex;
+  justify-content:flex-end;
+  color:white;
+}
+.Logo {
+  grid-area: Logo;
+  background-color:white;
+  font: 36px "Times New Roman";
+  border-style:solid;
+  border-color:#caebf2;
+  padding:20px;
+}
+.Quote {
+  grid-area: Quote;
+  background-color:white ; 
+  font: 18px "Times New Roman";
+  text-align: center;
+  line-height: 100px;
+  border-style:solid;
+  border-color:#caebf2;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+.TopMen {
+  display:flex;
+  justify-content:flex-start;
+  grid-area: TopMen;
+  background-color:#F5DAA4;
+  text-align:left;
+}
+.Main {
+  grid-area: Main;
+  background-color:white;
+  padding: 0px 30px;
+}
+.RSidebar {
+  grid-area: RSidebar;
+  background-color:#074477;
+}
+.Bottom {
+  grid-area: Bottom;
+  background-color:#074477;
+}
+.Tolstoy {
+  display:flex;
+  align-items:flex-end;
+  padding:0px;
+}
 </style>
