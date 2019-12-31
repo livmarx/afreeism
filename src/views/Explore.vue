@@ -6,53 +6,33 @@
         <div style="padding:0px 20px;">Contribute</div>
       </div>
       <div class="Logo">
-        <routerLink :to="{name: 'Home'}">
-        <div>The</div>
-        <div>Afreeist</div>
-        <div>Society</div>
-        </routerLink>
+        <LogoCode />
       </div>
-      <div class="Quote">
-          <p class="PageTitle">What Is Afreeism?</p>
+      <div class="PageTitle">
+        <span>What Is Afreeism?</span>
       </div>
-      <div class="TopMen">
-        <div style="font-size:18px; padding:10px 30px;"><routerLink :to="{name: 'Explore'}">What Is Afreeism?</routerLink></div>
-        <div style="font-size:18px; padding:10px 30px;"><routerLink :to="{name: 'Who_Are_We'}">Who Are We?</routerLink></div>
-      </div>
+      <TopMenCode />
       <div class="Main">
-        <p>
-              Afreeism is not a new idea.  Its roots go back thousands of years.
-     This website provides two ways to explore the ideas and ideals of afreeism.
-     
-    <p>
-      <b>The Afreeist Handbook</b>
-    </p>
-    <p> The most comprehensive way to introduce oneself to afreeism is by reading
-     the Afreeist Handbook.  The Handbook explains why free will is an illusion, 
-     discusses how this affects personal autonomy and moral responsibility, 
-     explores the history of afreeism,
-     examines the social policy implications, 
-     and explores how afreeism can change our personal lives for the better.
-     </p>
-    <p>
-       You can read the Afreeist Handbook 
-         <a href="Afreeist_Handbook.pdf">here.</a>
-      </p>
-    <p> 
-      You can download the Afreeist Handbook <a href="Afreeist_Handbook.pdf" download>here</a>.  
-    </p>
-    <p>Since afreeism is based on science and reason, we do not claim a monopoly on truth.  This is a way of saying that
-      we really appreciate any comments or critiques on the Afreeist Handbook.  Comments should be sent to 
-         Stephen Marks at smarks@bu.edu.
-    </p>
-    <p>
-      <b>The Web Tutorial</b>
-    </p>
-    <p>
-      The web tutorial provides a quicker introduction into the ideas and ideals of afreeism.  The web tutorial can
-      be accessed <routerLink :to="{name: 'Contents'}">here</routerLink>.
-
-        </p>
+        <div class="MainText">
+          <p>
+            This website provides two ways to explore afreeism.  The first is a collection of short readings
+            on various topics:
+          </p>
+          <div>
+            <b><routerLink :to="{name: 'Basics'}">Afreeist Concepts and Ideals</routerLink></b>  
+          </div>
+          <p style="margin:20px">
+            This is a collection of short readings on the various concepts and ideals of afreeism.
+          </p>
+          <p>
+            <b><routerLink :to="{name: 'AfreeistHandbook'}">The Afreeist Handbook</routerLink></b>
+          <div>
+            <p style="margin:20px">
+               The Afreeist Handbook is a more detailed description of the ideas and ideals of afreeism.
+               It is recommended reading for anyone interested in afreeism.
+            </p>
+          </div>
+        </div>
       </div>
       <div class="RSidebar" style="padding:20px;">
         <div style="margin:10px; padding:20px; background-color:white;"><routerLink :to="{name: 'JoinUs'}">JoinUs</routerLink></div>
@@ -60,7 +40,7 @@
         <div style="margin:10px; padding:20px; background-color:white;"><routerLink :to="{name: 'Blog'}">Blog</routerLink></div>
       </div>
       <div class="Bottom">
-        Bottom
+        <BottomMenuCode />
       </div>
     </div>
   </div>
@@ -68,10 +48,16 @@
 
 <script>
 // @ is an alias to /src
+import LogoCode from '@/views/LogoCode.vue'
+import BottomMenuCode from '@/views/BottomMenuCode.vue'
+import TopMenCode from '@/views/TopMenCode.vue'
 
 export default {
-  name: 'Explore',
-};
+  name: 'Home',
+  components:{
+    TopMenCode,LogoCode,BottomMenuCode,
+  },
+}
 </script>
 <style scoped>
 p {text-align:left;}

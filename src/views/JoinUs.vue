@@ -56,7 +56,7 @@
 // @ is an alias to /src
 import db from '@/firebase/init';
 export default {
-  name: 'JoinUs', 
+  name: 'JoinUs',
   data() {
     return {
       name: null,

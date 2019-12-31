@@ -6,23 +6,18 @@
         <div style="padding:0px 20px;">Contribute</div>
       </div>
       <div class="Logo">
-        <routerLink :to="{name: 'Home'}">
-        <div>The</div>
-        <div>Afreeist</div>
-        <div>Society</div>
-        </routerLink>
+        <LogoCode />
       </div>
-      <div class="Quote">
-        <span class="PageTitle">Newsletter</span>
+      <div class="PageTitle">
+        <span>Newsletter</span>
       </div>
-      <div class="TopMen">
-        <div style="font-size:18px; padding:10px 30px;"><routerLink :to="{name: 'Explore'}">What Is Afreeism?</routerLink></div>
-        <div style="font-size:18px; padding:10px 30px;"><routerLink :to="{name: 'Who_Are_We'}">Who Are We?</routerLink></div>
-      </div>
+      <TopMenCode />
       <div class="Main">
-    <p>
-      We haven't published a newsletter yet.  When we do, it will appear here.
-    </p>
+        <div class="MainText">
+          <p>
+            We haven't published a newsletter yet.  When we do, it will appear here.
+          </p>
+        </div>
       </div>
       <div class="RSidebar" style="padding:20px;">
         <div style="margin:10px; padding:20px; background-color:white;"><routerLink :to="{name: 'JoinUs'}">JoinUs</routerLink></div>
@@ -30,7 +25,7 @@
         <div style="margin:10px; padding:20px; background-color:white;"><routerLink :to="{name: 'Blog'}">Blog</routerLink></div>
       </div>
       <div class="Bottom">
-        Bottom
+        <BottomMenuCode />
       </div>
     </div>
   </div>
@@ -38,10 +33,16 @@
 
 <script>
 // @ is an alias to /src
+import LogoCode from '@/views/LogoCode.vue'
+import BottomMenuCode from '@/views/BottomMenuCode.vue'
+import TopMenCode from '@/views/TopMenCode.vue'
 
 export default {
-  name: 'Newsletter',
-};
+  name: 'Home',
+  components:{
+    TopMenCode,LogoCode,BottomMenuCode,
+  },
+}
 </script>
 <style scoped>
 p {text-align:left; color:#000000;}

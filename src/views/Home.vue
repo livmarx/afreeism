@@ -7,24 +7,18 @@
         <div style="padding:0px 20px;">Contribute</div>
       </div>
       <div class="Logo">
-        <routerLink :to="{name: 'Home'}">
-        <div>The</div>
-        <div>Afreeist</div>
-        <div>Society</div>
-        </routerLink>
+        <LogoCode />
       </div>
-      <div class="Quote">
+      <div class="PageTitle">
         <div style="height:30px; display:flex; flex-direction:column; justify-content:center;">
           <div style="font-size:24px; margin:0px; padding:0px; height:40px;">
             "Tout comprendre, c'est tout pardonner."
           </div>
-          <div style="font-size:24px; margin:0px; padding:0px">----Tolstoy, War and Peace</div>        </div>
-      </div>
-      <div class="TopMen">
-        <div style="font-size:18px; padding:10px 30px;"><routerLink :to="{name: 'Explore'}">What Is Afreeism?</routerLink></div>
-        <div style="font-size:18px; padding:10px 30px;"><routerLink :to="{name: 'Who_Are_We'}">Who Are We?</routerLink></div>
-      </div>
+        <div style="font-size:18px; margin:0px; padding:0px; text-align:right">--Tolstoy, War and Peace</div>        </div>
+      </div>      
+      <TopMenCode />
       <div class="Main">
+        <div class="MainText">
     <p class="Null">
       Afreeism (ay'-free-izm) is a simple idea.  Yet it is an idea so powerful that, if fully embraced, 
       it radically alters the 
@@ -71,6 +65,7 @@
   These are just a few of the implications of afreeism.  Afreeism has much to say about our
   place in the universe, our relationship to our fellow beings, and how we want to organize
   society.</p>
+  </div>
       </div>
       <div class="RSidebar" style="padding:20px;">
         <div style="margin:10px; padding:20px; background-color:white;"><routerLink :to="{name: 'JoinUs'}">JoinUs</routerLink></div>
@@ -78,7 +73,7 @@
         <div style="margin:10px; padding:20px; background-color:white;"><routerLink :to="{name: 'Blog'}">Blog</routerLink></div>
       </div>
       <div class="Bottom">
-        Bottom
+        <BottomMenuCode />
       </div>
     </div>
   </div>
@@ -86,9 +81,15 @@
 
 <script>
 // @ is an alias to /src
+import LogoCode from '@/views/LogoCode.vue'
+import BottomMenuCode from '@/views/BottomMenuCode.vue'
+import TopMenCode from '@/views/TopMenCode.vue'
 export default {
-  name: 'home',
-};
+  name: 'Home',
+  components:{
+    TopMenCode,LogoCode,BottomMenuCode,
+  },
+}
 </script>
 <style scoped>
 

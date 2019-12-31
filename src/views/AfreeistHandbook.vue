@@ -1,5 +1,5 @@
 <template>
-  <div>
+   <div>
     <div class="HomePage">
       <div class="Top"> 
         <div style="padding:0px 20px;">Login</div>
@@ -9,41 +9,26 @@
         <LogoCode />
       </div>
       <div class="PageTitle">
-          <span>Who Are We?</span>
+        <span>The Afreeist Handbook</span>
       </div>
       <TopMenCode />
       <div class="Main">
         <div class="MainText">
           <p>
-            <b>Who are we?</b>
-          </p>    
-          <p>
-            The Afreeist Society is a collection of individuals interested in the ideas and ideals
-            of afreeism.  The goals of the Afreeist Society are:
-          </p>   
-          <p>
-            a. To explain afreeism.
+            The Afreeist Handbook presents the ideas and ideals of afreeism.
+          </p>
+          <p style="text-indent:20px">
+               View the Afreeist Handbook <a href="Afreeist_Handbook.pdf">here</a>.
+          </p>
+          <p style="text-indent:20px">
+            Download the Afreeist Handbook <a href="Afreeist_Handbook.pdf" download>here</a>.
           </p>
           <p>
-            b. To stimulate thinking and research about afreeism.
-          </p>   
-          <p>
-            c. To promote the values and ideals of afreeism.
-          </p> 
-          <p>
-            <b>How can I learn more about afreesim?</b>
-          </p>
-          <p>
-            If you
-            wish to explore these ideas, a good starting point is 
-            <routerLink :to="{name: 'Explore'}">here</routerLink>, where you can find links to
-            explanations of afreeist concepts and ideals and also to the Afreeist Handbook.  
-            These resources explain why free will is an illusion,
-            discusses how this affects personal autonomy and moral responsibility, 
-            explores the history of afreeism (the roots go back
-            several thousand years), 
-            probes the social policy implications, and examines 
-            how afreeism can change our personal lives for the better. 
+            Because the ideas 
+            afreeism are based on fact and reason, and because none of us have a monopoly on 
+            the truth, the Afreeist Handbook is, and always will be, a work in progress.  We
+            invite your thoughts, your comments, your criticisms, about the ideas in the Handbook.
+            Please send these to smarks@bu.edu.
           </p>
         </div>
       </div>
@@ -57,7 +42,6 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -73,5 +57,6 @@ export default {
   },
 }
 </script>
-<style>
+<style scoped>
+p {text-align:left;}
 </style>
