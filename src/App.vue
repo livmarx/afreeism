@@ -5,7 +5,7 @@
 </template>
 
 <style lang="scss">
-body {background-color:#074477;}
+body {background-color:#074477; padding:20px}
 p {text-align:left; color:black;}
 div {text-align:left;}
 a {
